@@ -11,8 +11,6 @@ public class Find {
 	List<Thread> threads = new ArrayList<>();
 	List<Min> minRunnables = new ArrayList<>();
 	List<Max> maxRunnables = new ArrayList<>();
-	Semaphore semMax= new Semaphore(0);
-	Semaphore semMin = new Semaphore(0);
 
         if (args.length != 1) {
             System.out.println("Use: java Main <size>");
@@ -22,7 +20,6 @@ public class Find {
         try {
             int size = Integer.parseInt(args[0]);
 	    int[][] matrix = Matrix.generateMatrix(size);
-	    //System.out.println(Arrays.deepToString(matrix));
 
 	    for (int[] row : matrix) {
 		   Min minRunnable = new Min(row, min);
