@@ -42,7 +42,7 @@ public class Find {
 			    thread.join();
 		    } catch (InterruptedException e) {
 			    e.printStackTrace();
-            }
+		    }
 	    }
 
 	    for(Min elemento : minRunnables){
@@ -55,8 +55,8 @@ public class Find {
                     if(elemento.getMax() > max){
                             max = elemento.getMax();
                     }
+	     }
 
-            }
             System.out.printf("Max value: %d\n", max);
             System.out.printf("Min value: %d\n", min);
             
@@ -64,7 +64,5 @@ public class Find {
             System.out.println("The size of the matrix must be an integer.");
             System.exit(1);
         }
-
-        
     }
 }
