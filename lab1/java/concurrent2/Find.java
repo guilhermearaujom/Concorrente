@@ -40,7 +40,6 @@ public class Find {
 	    for(Thread thread : threads) {
 		    try {
 			    thread.join();
-			    System.out.println("retornou");
 		    } catch (InterruptedException e) {
 			    e.printStackTrace();
             }
