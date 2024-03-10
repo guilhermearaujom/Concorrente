@@ -35,11 +35,11 @@ public class Find {
 		   threads.add(thMin);
 		   threads.add(thMax);
 
-		   //thMin.start();
-		   //thMax.start();
+		   thMin.start();
+		   thMax.start();
 	    
 	    }
-	    /*
+	    
 	    for(Thread thread : threads) {
 		    try {
 			    thread.join();
@@ -60,7 +60,7 @@ public class Find {
                             max = elemento.getMax();
                     }
 
-            }*/
+            }
             System.out.printf("Max value: %d\n", max);
             System.out.printf("Min value: %d\n", min);
             
