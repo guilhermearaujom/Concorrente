@@ -1,30 +1,26 @@
 import java.util.concurrent.Semaphore;
 public class Max implements Runnable{
-        int[][] matrix;
+        int[] row;
         int max;
-	Semaphore sem;
-        Max(int[][] matrix, int max, Semaphore sem ) {
-		this.sem = sem;
+        Max(int[] row, int max) {
                 this.max = max;
-                this.matrix = matrix;
+                this.row = row;
         }
         @Override
         public void run(){
                 int largest = Integer.MIN_VALUE;
-                for (int[] row : matrix) {
                         for (int element : row) {
                                 if (element > largest) {
                                         largest = element;
                 }
             }
-        }
-
 
         this.max = largest;
-	System.out.printf("Max value: %d\n", max);
-	
 
         }
+	public int getMax(){
+		return this.max;
+	}
 
 }
 

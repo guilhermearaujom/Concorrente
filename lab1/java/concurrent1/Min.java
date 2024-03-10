@@ -21,9 +21,11 @@ public class Min implements Runnable{
         }
 
         this.min = smallest;
-	System.out.printf("Min value: %d\n", min);
 	sem.release();
 
         }
-
+	
+	public int getMin(){
+		return min;
+	}
 }
